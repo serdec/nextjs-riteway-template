@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "test": "NODE_ENV=test riteway -r @babel/register src/**/*-test.js | tap-nirvana",
+    "watch": "watch 'clear && npm run -s test && npm run -s lint' src",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -11,5 +14,21 @@
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@babel/register": "^7.12.1",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "prettier": "^2.2.1",
+    "riteway": "^6.2.1",
+    "tap-nirvana": "^1.1.0",
+    "watch": "^1.0.2"
   }
 }
