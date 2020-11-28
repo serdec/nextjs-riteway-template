@@ -1,5 +1,5 @@
 import React from 'react';
-
-const Header = () => <div className="header"></div>;
+import styles from './header.module.css';
+const Header = () => <div className={styles.header}></div>;
 
 export default Header;

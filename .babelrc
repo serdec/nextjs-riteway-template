@@ -15,7 +15,8 @@
         "next/babel"
       ],
       "plugins": [
-        "styled-jsx/babel"
+        "styled-jsx/babel",
+        "css-modules-transform"
       ]
     }
   }
